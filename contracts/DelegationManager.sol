@@ -8,7 +8,6 @@ contract DelegationManager {
     event Revoked(uint256 tokenId);
 
     function delegate(uint256 tokenId, address warlord) external {
-        // In a more complete version, you would also enforce that only the NFT owner can delegate
         delegations[tokenId] = warlord;
         emit Delegated(tokenId, warlord);
     }
